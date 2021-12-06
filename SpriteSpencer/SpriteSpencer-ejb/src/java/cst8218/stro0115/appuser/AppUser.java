@@ -79,7 +79,7 @@ public class AppUser implements Serializable {
         this.groupname = groupname;
     }
 
-       public String getPassword(){
+    public String getPassword(){
         return "";   
     }
     public void setPassword(String password){
