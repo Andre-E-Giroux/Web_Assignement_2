@@ -3,6 +3,8 @@ package service;
 
 import cst8218.stro0115.entity.Sprite;
 import java.util.List;
+import javax.annotation.security.DeclareRoles;
+import javax.annotation.security.RolesAllowed;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -23,6 +25,8 @@ import javax.ws.rs.core.Response;
  * 
  */
 @Stateless
+@DeclareRoles({"Admin","RestGroup"})
+@RolesAllowed({"Admin","RestGroup"})
 @Path("cst8218.stro0115.entity.sprite")
 public class SpriteFacadeREST extends AbstractFacade<Sprite> {
 

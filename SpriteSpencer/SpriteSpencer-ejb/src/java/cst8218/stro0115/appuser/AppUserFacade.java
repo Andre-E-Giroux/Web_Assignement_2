@@ -10,9 +10,9 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-/**
- *
- * @author Scion
+/** Set the persistence context of AppUsers
+ * 
+ * @author Andre
  */
 @Stateless
 public class AppUserFacade extends AbstractFacade<AppUser> {

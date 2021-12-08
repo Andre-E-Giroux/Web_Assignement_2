@@ -18,6 +18,10 @@ import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
 import javax.faces.model.SelectItem;
 
+/**This class controls the sprite behavior and CRUP operations
+ * 
+ * @author Spencer Stroud
+ */
 @Named("appUserController")
 @SessionScoped
 public class AppUserController implements Serializable {

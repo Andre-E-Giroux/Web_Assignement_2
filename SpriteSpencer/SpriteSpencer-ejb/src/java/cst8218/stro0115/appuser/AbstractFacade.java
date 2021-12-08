@@ -8,9 +8,8 @@ package cst8218.stro0115.appuser;
 import java.util.List;
 import javax.persistence.EntityManager;
 
-/**
- *
- * @author Scion
+/**This abstract class is inherited by SpriteFacade and contains CRUD methods
+ * @author : Spencer Stroud
  */
 public abstract class AbstractFacade<T> {
 

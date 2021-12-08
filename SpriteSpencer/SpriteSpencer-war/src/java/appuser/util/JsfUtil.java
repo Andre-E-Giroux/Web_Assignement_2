@@ -7,8 +7,13 @@ import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
 import javax.faces.model.SelectItem;
 
+/** The class uses common JSF utilities to assist in running the JSF pages of appuser entity
+ * 
+ * @author Spencer Stroud - automated
+ */
 public class JsfUtil {
 
+    
     public static SelectItem[] getSelectItems(List<?> entities, boolean selectOne) {
         int size = selectOne ? entities.size() + 1 : entities.size();
         SelectItem[] items = new SelectItem[size];

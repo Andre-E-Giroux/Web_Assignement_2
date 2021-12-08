@@ -24,9 +24,9 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
-/**
+/**AppUser class holds the attributes and methods for an application user
  *
- * @author Scion
+ * @author Spencer Stroud
  */
 @Entity
 @Table(name = "APPUSER")
@@ -56,32 +56,64 @@ public class AppUser implements Serializable {
     @Column(name = "USERID")
     private String userid;
 
+    /**
+     * Constructor for the app user
+     */
     public AppUser() {
     }
 
+    /**
+     * Constructor for the app user with an ID parameter
+     * @param id of the created id
+     */
     public AppUser(Long id) {
         this.id = id;
     }
 
+    /**
+     * Get the app user object's ID
+     * @return int: UserApp ID
+     */
     public Long getId() {
         return id;
     }
 
+    /**
+     * Set the app user object's ID
+     * @param id int: id
+     */
     public void setId(Long id) {
         this.id = id;
     }
 
+    /**
+     * Get UserApp object's groupName
+     * @return user's group name
+     */
     public String getGroupname() {
         return groupname;
     }
 
+    /**
+     * Set the app user object's groupName
+     * @param groupname string: user's group name
+     */
     public void setGroupname(String groupname) {
         this.groupname = groupname;
     }
 
+    /**
+     * Get UserApp object's password
+     * @return user's password
+     */
     public String getPassword(){
         return "";   
     }
+    
+     /**
+     * Set the app user object's password
+     * @param password string: user's new password
+     */
     public void setPassword(String password){
                 // initialize a PasswordHash object which will generate password hashes
      Instance<? extends PasswordHash> instance = CDI.current().select(Pbkdf2PasswordHash.class);
@@ -92,15 +124,26 @@ public class AppUser implements Serializable {
 
     }
     
-
+    /**
+     * Get UserApp object's userId (Username)
+     * @return user's userId
+     */
     public String getUserid() {
         return userid;
     }
 
+    /**
+     * Set the app user object's userId (username)
+     * @param userid string: user's new userId
+     */
     public void setUserid(String userid) {
         this.userid = userid;
     }
 
+    /**
+     * Get the hash code
+     * @return return the id's hashCode if id is not null, returns 0 if id is null
+     */
     @Override
     public int hashCode() {
         int hash = 0;
@@ -108,6 +151,11 @@ public class AppUser implements Serializable {
         return hash;
     }
 
+    /**
+     * Check if the object passed is equal to the AppUser object
+     * @param object object to check if it's id matches this App User's id
+     * @return true if the IDs match, returns false if the object's id does not equal the App User
+     */
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
@@ -121,6 +169,10 @@ public class AppUser implements Serializable {
         return true;
     }
 
+    /**
+     * 
+     * @return returns the AppUser object as a string
+     */
     @Override
     public String toString() {
         return "appuser.AppUser[ id=" + id + " ]";

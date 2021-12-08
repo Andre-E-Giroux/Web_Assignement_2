@@ -17,7 +17,7 @@ import static org.junit.Assert.*;
 import sprite.ColorConverter;
 
 /**
- *
+ * Test class to test the  ColorConverter class
  * @author Andre
  */
 public class TestColorConverter {
@@ -41,8 +41,8 @@ public class TestColorConverter {
     public void tearDown() {
     }
 
-    /**Tests the color converter creation
-     * 
+    /**Tests the color converter method getAsObject()
+     * Uses a string of RGB value to create and get a color object with the RGB values 
      */
     @Test
     public void testColorConverterObject() 
@@ -59,6 +59,9 @@ public class TestColorConverter {
         assertEquals(testingColor,returnedColor);
     }
     
+    /**Tests the color converter method getAsString()
+     * Uses a a color object as a parameter to create and return the objects RGB values as a string 
+     */
     @Test
     public void testColorConverterString()
     {
